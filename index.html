@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nor3iny ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#1d0f16,#47243b);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:white;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:25px;
+text-align:center;
+box-shadow:0 0 25px rgba(255,255,255,.15);
+}
+
+h1{
+font-size:35px;
+margin-bottom:10px;
+}
+
+p{
+margin:10px 0;
+}
+
+.counter{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin-top:20px;
+}
+
+.box{
+background:rgba(255,255,255,.08);
+padding:15px;
+border-radius:15px;
+}
+
+.number{
+font-size:28px;
+font-weight:bold;
+display:block;
+color:#ffb6c1;
+}
+
+button{
+margin-top:20px;
+padding:14px;
+width:100%;
+border:none;
+border-radius:40px;
+background:#ff4f87;
+color:white;
+font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Noorhan & eslam ❤️</h1>
+
+<p>Every moment with you is my favorite memory.</p>
+
+<h3>Together Since</h3>
+
+<p>19 October 2023</p>
+
+<div class="counter">
+
+<div class="box"><span class="number" id="years"></span>Years</div>
+
+<div class="box"><span class="number" id="months"></span>Months</div>
+
+<div class="box"><span class="number" id="days"></span>Days</div>
+
+<div class="box"><span class="number" id="hours"></span>Hours</div>
+
+<div class="box"><span class="number" id="minutes"></span>Minutes</div>
+
+<div class="box"><span class="number" id="seconds"></span>Seconds</div>
+
+</div>
+
+<button onclick="alert('I Love You Noorhan ❤️')">
+💌 Love Letter
+</button>
+
+</div>
+
+<script>
+
+const start=new Date("2023-10-19");
+
+function update(){
+
+const now=new Date();
+
+const diff=now-start;
+
+document.getElementById("years").innerHTML=Math.floor(diff/1000/60/60/24/365);
+
+document.getElementById("months").innerHTML=Math.floor(diff/1000/60/60/24/30)%12;
+
+document.getElementById("days").innerHTML=Math.floor(diff/1000/60/60/24)%30;
+
+document.getElementById("hours").innerHTML=Math.floor(diff/1000/60/60)%24;
+
+document.getElementById("minutes").innerHTML=Math.floor(diff/1000/60)%60;
+
+document.getElementById("seconds").innerHTML=Math.floor(diff/1000)%60;
+
+}
+
+update();
+
+setInterval(update,1000);
+
+</script>
+
+</body>
+</html>
